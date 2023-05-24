@@ -36,7 +36,7 @@ export default async function Project({ params }: Props) {
                 width={1200}
                 className="object-cover h-full w-full rounded-lg aspect-video"
             />
-            <div className="m-20">
+            <div className="mx-4 py-4">
                 <PortableText value={project.content}></PortableText>
             </div>
         </div>
