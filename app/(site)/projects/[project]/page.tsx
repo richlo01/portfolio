@@ -15,7 +15,7 @@ export default async function Project({ params }: Props) {
 
     return (
         <div>
-            <header className="flex w-full gap-4">
+            <header className="flex flex-wrap overflow-hidden w-full gap-4 py-6">
                 <h1 className="text-7xl font-extrabold">{project.name}</h1>
 
                 <a 
@@ -36,7 +36,7 @@ export default async function Project({ params }: Props) {
                 width={1200}
                 className="object-cover h-full w-full rounded-lg aspect-video"
             />
-            <div className="mx-4 py-4 mx-auto prose prose-p:text-white">
+            <div className="mx-4 py-4 mx-auto prose prose-p:text-white prose-strong:text-white">
                 <PortableText value={project.content}></PortableText>
             </div>
         </div>
