@@ -24,14 +24,14 @@ export default async function Home() {
           <Link 
             href={`/projects/${project.slug}`}
             key={project._id} 
-            className="bg-zinc-800 rounded-lg max-h-60 grid grid-rows-3 hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-600/50 transition">
+            className="bg-zinc-800 rounded-lg max-h-60 grid grid-rows-3 hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-600/50 transition group overflow-hidden">
             {project.image && (
             <Image 
               src={project.image}
               alt={project.alt}
               width={250}
               height={100}
-              className="object-cover h-full w-full rounded-lg row-span-2"
+              className="object-cover h-full w-full rounded-lg row-span-2 group-hover:scale-105 transition"
             />)}
             <div className="text-2xl p-4">{project.name}</div>
           </Link>
