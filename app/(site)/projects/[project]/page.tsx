@@ -36,7 +36,7 @@ export default async function Project({ params }: Props) {
                 width={1200}
                 className="object-cover h-full w-full rounded-lg aspect-video"
             />
-            <div className="mx-4 py-4 mx-auto prose prose-p:text-white prose-strong:text-white">
+            <div className="mx-4 py-4 mx-auto prose dark:prose-invert">
                 <PortableText value={project.content}></PortableText>
             </div>
         </div>

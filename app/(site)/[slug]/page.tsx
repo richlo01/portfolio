@@ -14,7 +14,7 @@ export default async function Page({ params }: Prop) {
                 {page.title}
             </h1>
 
-            <div className="text-lg prose prose-p:text-white prose-strong:text-white prose-h3:text-white prose-li:text-white">
+            <div className="text-lg prose dark:prose-invert prose-a:text-indigo-600">
                 <PortableText value={page.content}/>
             </div>
         </div>

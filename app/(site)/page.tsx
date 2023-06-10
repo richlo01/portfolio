@@ -15,7 +15,7 @@ export default async function Home() {
         </span>
       </h1>
 
-      <p className="text-xl italic mt-3 text-zinc-400">Software Developer; Programmer @ Clark County DES</p>
+      <p className="text-xl italic mt-3 dark:text-zinc-400 light:text-zinc-800">Software Developer; Programmer @ Clark County DES</p>
       
       <h2 className="mt-12 font-bold text-3xl">Projects</h2>
       
@@ -24,7 +24,7 @@ export default async function Home() {
           <Link 
             href={`/projects/${project.slug}`}
             key={project._id} 
-            className="bg-zinc-800 rounded-lg max-h-60 grid grid-rows-3 hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-600/50 transition group overflow-hidden">
+            className="dark:bg-zinc-800 bg-zinc-100 rounded-lg max-h-60 grid grid-rows-3 hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-600/50 transition group overflow-hidden">
             {project.image && (
             <Image 
               src={project.image}
@@ -33,7 +33,7 @@ export default async function Home() {
               height={100}
               className="object-cover h-full w-full rounded-lg row-span-2 group-hover:scale-105 transition"
             />)}
-            <div className="text-2xl p-4">{project.name}</div>
+            <div className="text-xl p-4">{project.name}</div>
           </Link>
         ))}
       </div>
