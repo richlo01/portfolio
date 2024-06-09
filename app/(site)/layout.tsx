@@ -1,44 +1,41 @@
-import Link from 'next/link'
-import '../globals.css'
-import { Inter } from 'next/font/google'
-import { getPages } from '@/sanity/sanity-utils'
+"use client";
 
+import "../globals.css";
+import { neueMontreal } from "../fonts";
+import { Providers } from "../providers";
+import { NavbarAlt } from "@/components/Navbar/navbar.alternative";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar/navbar";
+import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Richard Lopez',
-  description: 'Portfolio - Where all the projects can be viewed!',
-}
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const pages = await getPages();
+  const [showAltNav, setShowAltNav] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 80) {
+      setShowAltNav(true);
+    } else {
+      setShowAltNav(false);
+    }
+  });
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>
-          <nav className="container flex justify-between max-w-5xl mx-auto px-5 lg:px-0 py-4">
-            <Link
-              href="/"
-              className="font-extrabold group font-lg tracking-widest">
-                RSL.
-            </Link>
-            <div className="flex gap-4">
-              {pages.map((page) => (
-                <Link key={page._id} href={`/${page.slug}`} className="group">
-                  {page.title}
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-indigo-600"></span>
-                </Link>
-              ))}
-            </div>
-          </nav>
-        </header>
-        <main className="container max-w-5xl mx-auto px-5 lg:px-0 py-20">{children}</main>
+      <body className={[neueMontreal.className].join(" ")}>
+        <Navbar />
+        <NavbarAlt className={cn(showAltNav && "translate-y-0")} />
+        <Providers>
+          <main>{children}</main>
+        </Providers>
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
