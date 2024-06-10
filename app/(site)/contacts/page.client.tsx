@@ -1,5 +1,6 @@
 import { GridContainer } from "@/components/GridContainer";
 import { ImageFeature } from "@/components/ImageFeature";
+import TextReveal from "@/components/TextReveal";
 import { Project } from "@/sanity.types";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
@@ -14,9 +15,11 @@ export function ContactClient({ projects }: { projects: Project[] }) {
   return (
     <>
       <GridContainer>
-        <h1 className="text-9xl uppercase col-start-3 col-span-6">
-          Let's work together.
-        </h1>
+        <TextReveal
+          text="Let's work together."
+          className="text-9xl uppercase col-start-3 col-span-9"
+          as="h1"
+        />
         <p className="col-start-3 col-span-3 font-medium uppercase">
           Create a website rich in storytelling and leave an impression for your
           audience. Rebrand with me and never look back.

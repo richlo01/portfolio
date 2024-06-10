@@ -5,6 +5,7 @@ import { GridContainer } from "@/components/GridContainer";
 import { HR } from "@/components/HR";
 import { ProjectArchiveGrid } from "@/components/ProjectArchiveGrid";
 import { ProjectArchiveList } from "@/components/ProjectArchiveList";
+import TextReveal from "@/components/TextReveal";
 import { cn } from "@/lib/utils";
 import { Project } from "@/sanity.types";
 import { urlFor } from "@/sanity/sanity-utils";
@@ -22,7 +23,11 @@ export function ProjectClient({ projects }: { projects: Project[] }) {
     <>
       <GridContainer>
         <div className="col-span-full flex items-start">
-          <h1 className="text-9xl uppercase">All Works</h1>
+          <TextReveal
+            className="text-9xl uppercase"
+            text={"All Works"}
+            as="h1"
+          />
           <span className="text-xl">[ {projects.length} ]</span>
         </div>
       </GridContainer>
