@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <header className="uppercase grid grid-cols-12 gap-x-3 w-full h-20 text-sm font-medium tracking-wide items-center p-5">
+    <header className="uppercase hidden sm:grid grid-cols-12 gap-x-3 w-full h-20 text-sm font-medium tracking-wide items-center p-5">
       <Link href="/" className="col-span-2">
         Richard Lopez
       </Link>

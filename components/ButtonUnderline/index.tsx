@@ -18,16 +18,16 @@ const ButtonUnderline = ({
         className
       )}
     >
-      <div className="absolute group-hover:-translate-y-[150%] transition-all  pl-2">
+      <div className="absolute group-hover:-translate-y-[150%] transition-all  pl-3">
         {children}
       </div>
-      <div className="absolute translate-y-[150%] group-hover:-translate-y-0 transition-all  text-neutral-50 pl-2">
+      <div className="absolute translate-y-[150%] group-hover:-translate-y-0 transition-all  text-neutral-50 pl-3">
         {children}
       </div>
-      <div className="absolute right-2 grid place-items-center h-full group-hover:-translate-y-[150%] transition-all ">
+      <div className="absolute right-3 grid place-items-center h-full group-hover:-translate-y-[150%] transition-all ">
         {icon}
       </div>
-      <div className="absolute right-2 grid place-items-center h-full text-neutral-50 translate-y-[150%] group-hover:-translate-y-0 transition-all ">
+      <div className="absolute right-3 grid place-items-center h-full text-neutral-50 translate-y-[150%] group-hover:-translate-y-0 transition-all ">
         {icon}
       </div>
       {/* <span className="block max-w-0 group-hover:max-w-full w-full transition-all ease-out  h-px bg-black dark:bg-slate-400 absolute bottom-0" /> */}

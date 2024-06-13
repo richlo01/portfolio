@@ -35,6 +35,12 @@ importers:
       clsx:
         specifier: ^2.1.0
         version: 2.1.1
+      embla-carousel-autoplay:
+        specifier: ^8.1.4
+        version: 8.1.4(embla-carousel@8.1.4)
+      embla-carousel-react:
+        specifier: ^8.1.4
+        version: 8.1.4(react@18.3.1)
       eslint:
         specifier: 9.3.0
         version: 9.3.0
@@ -2198,6 +2204,24 @@ packages:
 
   electron-to-chromium@1.4.784:
     resolution: {integrity: sha512-9CZwh+sDrhDAeOEFh8s3PqwduzTyYIeYwZolc1b9ENAUt3ePu7R1sJSCWr/820ISssRxCJUyHI9Wb7j+0Uo1AA==}
+
+  embla-carousel-autoplay@8.1.4:
+    resolution: {integrity: sha512-lsQkKiU5sIVg5vuaWo6BTzQT+7Z6AEMnCIQho4bS6KFeBE8FtsL/HOmtLx7fLu2reH6keJ1vNmLn6L/w9CQj+Q==}
+    peerDependencies:
+      embla-carousel: 8.1.4
+
+  embla-carousel-react@8.1.4:
+    resolution: {integrity: sha512-0llfX4HlXrdgJKxlZ8q8LyI6EV+TvOI7KtZx9GkDTwdgP6/AyyuvzO8KYvDUNZOnbFBAPbVEe2qEgGMLEinlYw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+
+  embla-carousel-reactive-utils@8.1.4:
+    resolution: {integrity: sha512-qkovXTiNaURsnYhJxUBsDx9YV6crxLIZwfO6jIFSKKn6ZZE1JVeZAvy/UsiyNxiFikVrO76iquvD6uBHI9YD8w==}
+    peerDependencies:
+      embla-carousel: 8.1.4
+
+  embla-carousel@8.1.4:
+    resolution: {integrity: sha512-AMe40ZpyLpztfNnGQtMWVIgYdcBoY2MuQttRwQ/xqSPC3UvDG2QF17CR5Efz4c8qEkno7pxdZFDRO2R11y6hRQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -6978,6 +7002,22 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.4.784: {}
+
+  embla-carousel-autoplay@8.1.4(embla-carousel@8.1.4):
+    dependencies:
+      embla-carousel: 8.1.4
+
+  embla-carousel-react@8.1.4(react@18.3.1):
+    dependencies:
+      embla-carousel: 8.1.4
+      embla-carousel-reactive-utils: 8.1.4(embla-carousel@8.1.4)
+      react: 18.3.1
+
+  embla-carousel-reactive-utils@8.1.4(embla-carousel@8.1.4):
+    dependencies:
+      embla-carousel: 8.1.4
+
+  embla-carousel@8.1.4: {}
 
   emoji-regex@8.0.0: {}
 

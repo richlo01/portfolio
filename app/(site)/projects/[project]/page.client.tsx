@@ -3,6 +3,7 @@
 import ButtonUnderline from "@/components/ButtonUnderline";
 import { GridContainer } from "@/components/GridContainer";
 import { ImageFeature } from "@/components/ImageFeature";
+import TextReveal from "@/components/TextReveal";
 import { VerticalSeparator } from "@/components/VerticalSeparator";
 import { Project } from "@/sanity.types";
 import { PortableText } from "@portabletext/react";
@@ -14,7 +15,11 @@ export function ProjectItemClient({ project }: { project: Project }) {
     <>
       <GridContainer className="relative">
         <div className="lg:col-span-6 flex flex-col justify-between pb-5">
-          <h1 className="text-8xl uppercase col-span-full">{project.name}</h1>
+          <TextReveal
+            className="text-8xl uppercase col-span-full"
+            text={project?.name ?? ""}
+            as="h1"
+          />
           <GridContainer className="px-0">
             <div className="px-0 col-span-6">
               <div className="flex flex-col gap-y-5 w-full">

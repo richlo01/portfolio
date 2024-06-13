@@ -9,6 +9,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar/navbar";
 import { Footer } from "@/components/Footer";
+import { NavbarMobile } from "@/components/Navbar/mobile/navbar";
 
 export default function RootLayout({
   children,
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={[neueMontreal.className].join(" ")}>
         <Navbar />
+        <NavbarMobile />
         <NavbarAlt className={cn(showAltNav && "translate-y-0")} />
         <Providers>
           <main>{children}</main>

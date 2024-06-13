@@ -67,8 +67,8 @@ export function NavbarAlt({ className }: { className?: string }) {
               Close
             </button>
           </div>
-          <div className="col-start-9 flex flex-col">
-            <span className="text-xs uppercase mb-10 tracking-widest">
+          <div className="order-last lg:order-none col-span-full lg:col-start-9 flex flex-col">
+            <span className="text-xs uppercase mb-3 lg:mb-10 tracking-widest">
               Socials
             </span>
             <Link href="/" className="col-start-3">
@@ -84,14 +84,15 @@ export function NavbarAlt({ className }: { className?: string }) {
               lopezrs1201@gmail.com
             </Link>
           </div>
-          <div className="col-start-11 col-span-2 flex flex-col mt-auto">
-            <span className="text-xs uppercase mb-10 tracking-widest">
+          <div className="col-span-full lg:col-start-11 lg:col-span-2 flex flex-col mt-auto">
+            <span className="text-xs uppercase mb-3 lg:mb-10 tracking-widest">
               Pages
             </span>
             {pages.map((p, i) => (
               <Link
+                key={"globalLinks" + i}
                 href={p.href}
-                className="text-3xl font-medium hover:text-neutral-400 capitalize"
+                className="text-5xl lg:text-3xl font-medium hover:text-neutral-400 capitalize"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 {p.title}

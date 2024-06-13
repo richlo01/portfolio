@@ -1,8 +1,12 @@
 import { GridContainer } from "../GridContainer";
 import Link from "next/link";
 import { CornerDownRight } from "lucide-react";
+import { TraceContainer } from "../TraceContainer";
+import { Slideshow } from "../Slideshow";
+import { useRef } from "react";
 
 export function Footer() {
+  const footerRef = useRef(null);
   return (
     <footer className="bg-neutral-900 text-neutral-100 py-10 overflow-hidden">
       <GridContainer>
@@ -19,13 +23,15 @@ export function Footer() {
             </span>
           </p>
           <div className="my-auto">
-            <Link
-              href="/"
-              className="text-5xl underline underline-offset-8 flex items-center "
-            >
-              <CornerDownRight className="mr-5" /> Let{"'"}s create your
-              project.
-            </Link>
+            <TraceContainer tooltip={<Slideshow />} ref={footerRef}>
+              <Link
+                href="/"
+                className="text-5xl underline underline-offset-8 flex items-center "
+              >
+                <CornerDownRight className="mr-5" /> Let{"'"}s create your
+                project.
+              </Link>
+            </TraceContainer>
           </div>
         </div>
         <div className="col-start-11 writing-vertical-rl rotate-180 mt-auto">
