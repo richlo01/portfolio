@@ -62,14 +62,14 @@ export default function Resume() {
   return (
     <>
       <GridContainer className="mt-10">
-        <p className="col-span-10 indent-40 text-7xl uppercase">
+        <p className="col-span-10 indent-20 lg:indent-40 text-4xl lg:text-7xl uppercase">
           I combine my experience in design and engineering to solve problems,
           tell stories, and create compelling experiences.
         </p>
       </GridContainer>
       <GridContainer className="mt-8">
-        <GridContainer className="col-start-8 col-span-4">
-          <div className="col-span-10 flex flex-col gap-y-8">
+        <GridContainer className="lg:col-start-8 col-span-4 px-0">
+          <div className="col-start-2 col-span-3 lg:col-span-full flex flex-col gap-y-8">
             <p>
               I am Richard Lopez, a full-stack web developer based in Las Vegas,
               NV, USA. With experience in the public sector and private sector,
@@ -81,7 +81,7 @@ export default function Resume() {
               width={3072}
               height={4000}
               alt="Profile Picture"
-              className="grayscale"
+              className="grayscale max-h-96 lg:max-h-none object-cover"
             />
           </div>
         </GridContainer>
@@ -96,12 +96,12 @@ export default function Resume() {
         {experiences?.map((e, i) => (
           <li key={i + e.company + e.time} className="group py-1 relative">
             <div className={"grid grid-cols-12 group-hover:text-neutral-50"}>
-              <span className="col-span-2">
+              <span className="hidden lg:block col-span-2">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="col-span-4">{e.title}</span>
-              <span className="col-span-2">{e.meta}</span>
-              <span className="col-span-2">{e.company}</span>
+              <span className="col-span-3 lg:col-span-2">{e.meta}</span>
+              <span className="col-span-3 lg:col-span-2">{e.company}</span>
               <span className="col-span-2 text-end">{e.time}</span>
             </div>
             <div

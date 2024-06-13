@@ -14,16 +14,16 @@ export function ProjectItemClient({ project }: { project: Project }) {
   return (
     <>
       <GridContainer className="relative">
-        <div className="lg:col-span-6 flex flex-col justify-between pb-5">
+        <div className="col-span-full lg:col-span-6 flex flex-col justify-between pb-5">
           <TextReveal
-            className="text-8xl uppercase col-span-full"
+            className="text-6xl lg:text-8xl uppercase col-span-full"
             text={project?.name ?? ""}
             as="h1"
           />
-          <GridContainer className="px-0">
-            <div className="px-0 col-span-6">
+          <GridContainer className="pt-7 lg:pt-0 px-0 lg:px-0">
+            <div className="px-0 col-span-full lg:col-span-6">
               <div className="flex flex-col gap-y-5 w-full">
-                <div className="flex gap-x-2 font-medium  text-lg">
+                <div className="flex flex-wrap gap-x-2 font-medium  text-lg">
                   {project.name}
                   <VerticalSeparator />
                   {project.tag}
@@ -45,7 +45,7 @@ export function ProjectItemClient({ project }: { project: Project }) {
             </div>
           </GridContainer>
         </div>
-        <div className="lg:col-span-6 h-[calc(100vh-5rem)] pb-5 lg:sticky top-10">
+        <div className="col-span-full lg:col-span-6 min-h-[50vh] lg:h-[calc(100vh-5rem)] pb-5 lg:sticky top-10">
           {project.images && project.images.length > 0 && (
             <ImageFeature projectImage={project.images[0]} />
           )}
@@ -61,14 +61,16 @@ export function ProjectItemClient({ project }: { project: Project }) {
               return (
                 <ImageFeature
                   projectImage={p}
-                  className={"col-span-full aspect-video"}
+                  className={"col-span-full lg:aspect-video"}
                 />
               );
             }
             return (
               <ImageFeature
                 projectImage={p}
-                className={"lg:col-span-6 lg:aspect-square"}
+                className={
+                  "col-span-full aspect-square lg:col-span-6 lg:aspect-square"
+                }
               />
             );
           })}

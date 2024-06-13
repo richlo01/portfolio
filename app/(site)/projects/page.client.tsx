@@ -22,19 +22,21 @@ export function ProjectClient({ projects }: { projects: Project[] }) {
   return (
     <>
       <GridContainer>
-        <div className="col-span-full flex items-start">
+        <div className="col-span-full flex items-start relative">
           <TextReveal
-            className="text-9xl uppercase"
+            className="text-8xl lg:text-9xl uppercase"
             text={"All Works"}
             as="h1"
           />
-          <span className="text-xl">[ {projects.length} ]</span>
+          <span className="text-xl absolute right-0 top-0 lg:static">
+            [ {projects.length} ]
+          </span>
         </div>
       </GridContainer>
       <HR title={"Works"} />
 
-      <GridContainer>
-        <div className="col-start-12 flex items-center gap-x-5 ml-auto">
+      <div className="flex w-full justify-end px-3 lg:px-5">
+        <div className="flex items-center gap-x-5 ml-auto">
           <Link href={{ pathname: "/projects", query: { view: "list" } }}>
             <ButtonHightlight
               highlight={!isGrid}
@@ -53,7 +55,7 @@ export function ProjectClient({ projects }: { projects: Project[] }) {
             </ButtonHightlight>{" "}
           </Link>
         </div>
-      </GridContainer>
+      </div>
 
       {!isGrid ? (
         <ProjectArchiveList projects={projects} />

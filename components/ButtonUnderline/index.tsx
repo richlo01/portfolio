@@ -14,7 +14,7 @@ const ButtonUnderline = ({
     <Button
       variant="ghost"
       className={cn(
-        "group w-full items-center justify-start relative px-0 hover:bg-transparent border-b rounded-none max-w-[33vw] overflow-hidden",
+        "group w-full items-center justify-start relative px-0 hover:bg-transparent border-b rounded-none max-w-96 overflow-hidden",
         className
       )}
     >

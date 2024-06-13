@@ -6,11 +6,13 @@ export function NavbarMobile() {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-between items-center px-5 h-20 sm:hidden uppercase tracking-wide font-medium">
-      <div className="flex flex-col justify-between">
+    <div className="flex justify-between p-3 lg:px-5 h-20 sm:hidden uppercase tracking-wide font-medium text-xs">
+      <div className="flex flex-col">
         <Link href="/" className="col-span-2">
           Richard Lopez
         </Link>
+      </div>
+      <div className="flex flex-col gap-y-1">
         <Link
           href="/projects"
           className={cn(
@@ -19,8 +21,6 @@ export function NavbarMobile() {
         >
           Works
         </Link>
-      </div>
-      <div className="flex flex-col">
         <Link
           href="/resume"
           className={cn(

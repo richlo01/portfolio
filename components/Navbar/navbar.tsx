@@ -22,7 +22,7 @@ const Navbar = () => {
       <Link
         href="/resume"
         className={cn(
-          "col-start-11",
+          "text-end col-start-10",
           pathname === "/resume" ? "underline underline-offset-4" : null
         )}
       >
@@ -31,7 +31,7 @@ const Navbar = () => {
       <Link
         href="/contacts"
         className={cn(
-          "col-start-12",
+          "text-end col-start-11 col-span-2",
           pathname === "/contacts" ? "underline underline-offset-4" : null
         )}
       >

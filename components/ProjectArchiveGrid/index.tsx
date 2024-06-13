@@ -23,10 +23,10 @@ export function ProjectArchiveGrid({
           href={`/projects/${p.slug}`}
           key={p._id}
           className={cn(
-            "flex flex-col lg:basis-1/3 px-1 hover:brightness-95 transition"
+            "flex flex-col w-full md:basis-1/2 lg:basis-1/3 px-1 hover:brightness-95 transition"
           )}
         >
-          <div className="flex gap-x-2 roboto-mono uppercase tracking-tighter">
+          <div className="flex flex-wrap gap-x-2 roboto-mono uppercase tracking-tighter">
             {String(i + 1).padStart(2, "0")}
             <VerticalSeparator />
             {p.name}

@@ -67,20 +67,27 @@ export function NavbarAlt({ className }: { className?: string }) {
               Close
             </button>
           </div>
-          <div className="order-last lg:order-none col-span-full lg:col-start-9 flex flex-col">
+          <div className="order-last lg:order-none col-span-full lg:col-start-9 lg:col-span-2 flex flex-col">
             <span className="text-xs uppercase mb-3 lg:mb-10 tracking-widest">
               Socials
             </span>
-            <Link href="/" className="col-start-3">
+            <Link
+              href="https://www.linkedin.com/in/richard-lopez-6ab1b0207/"
+              target="_blank"
+              rel="noreferrer"
+              className="col-start-3"
+            >
               LinkedIn
             </Link>
-            <Link href="/" className="col-start-3">
+            <Link
+              href="https://github.com/richlo01"
+              className="col-start-3"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </Link>
-            <Link href="/" className="col-start-3">
-              Instagram
-            </Link>
-            <Link href="/" className="col-start-3">
+            <Link href="mailto:lopezrs1201@gmail.com" className="col-start-3">
               lopezrs1201@gmail.com
             </Link>
           </div>

@@ -28,7 +28,7 @@ export function HomeClient({ projects }: { projects: Project[] }) {
           tooltip={<Slideshow />}
           ref={heroRef}
         >
-          <div className="flex flex-col lg:h-full lg:flex-row lg:justify-between px-5 pb-5 lg:pb-0 lg:pt-8 gap-y-3">
+          <div className="flex flex-col lg:h-full lg:flex-row lg:justify-between px-3 lg:px-5 pb-5 lg:pb-0 lg:pt-8 gap-y-3">
             <p className="uppercase max-w-96 font-medium">
               Richard is a full-stack developer based in Las Vegas, NV, USA.
               Currently a programmer at Clark County.
@@ -45,7 +45,7 @@ export function HomeClient({ projects }: { projects: Project[] }) {
           <Image
             src={richardlopez}
             alt="Homescreen splash text"
-            className="w-full order-first mt-auto lg:absolute bottom-0 p-5 py-3"
+            className="w-full order-first mt-auto lg:absolute bottom-0 px-3 lg:px-5 p-5 py-3"
             priority
           />
         </TraceContainer>
@@ -60,7 +60,7 @@ export function HomeClient({ projects }: { projects: Project[] }) {
       <HR title={"Background"} />
 
       <GridContainer>
-        <GridContainer className="lg:col-start-7 lg:col-span-3 col-span-2 px-0 gap-y-4">
+        <GridContainer className="lg:col-start-5 lg:col-span-5 md:col-start-7 md:col-span-3 col-span-full px-0 gap-y-4">
           <h4 className="uppercase font-medium col-span-full">
             Hello, I'm Richard, a{" "}
             <span className="relative">
@@ -97,26 +97,29 @@ export function HomeClient({ projects }: { projects: Project[] }) {
           alt={"Alternative profile pic"}
           width={3072}
           height={4080}
-          className="lg:col-start-10 col-span-3 aspect-square h-full object-cover grayscale"
+          className="col-span-full md:col-start-10 md:col-span-3 aspect-square h-full object-cover grayscale"
         />
       </GridContainer>
 
       <HR title={"Sneak Peak"} />
 
       <GridContainer className="pb-20">
-        <p className="px-0 uppercase text-3xl col-span-8 indent-40 mb-8">
+        <p className="px-0 uppercase text-3xl col-span-full lg:col-span-8 indent-20 lg:indent-40 mb-3 lg:mb-8">
           Take a sneak peak at recent projects finished by me. There are
           websites, machine learning models, and demos. Feel free to snoop
           around!
         </p>
-        <p className="col-start-8 col-span-3">
+        <p className="col-span-3 col-start-2 lg:col-start-8 lg:col-span-4">
           My designs are inspired by straight lines, rigid grid systems, and
           typography. This way, content is delivered in a clear and concise way
           while leaving an empression. This can be seen through the portfolio
           itself. While this content block may only contain a sneak peak of my
           work, be sure to check them all out on my works page!
         </p>
-        <Link href={"/projects"} className="col-start-6 col-span-2">
+        <Link
+          href={"/projects"}
+          className="lg:col-start-6 col-span-2 lg:col-span-3"
+        >
           <ButtonUnderline
             icon={<ArrowUpRight strokeWidth="1" />}
             className="py-6"
@@ -125,7 +128,7 @@ export function HomeClient({ projects }: { projects: Project[] }) {
           </ButtonUnderline>
         </Link>
 
-        <Link href={"/contacts"} className="col-span-2">
+        <Link href={"/contacts"} className="col-span-2 lg:col-span-3">
           <ButtonUnderline
             className="py-6"
             icon={<ArrowUpRight strokeWidth="1" />}

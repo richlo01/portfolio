@@ -17,18 +17,18 @@ export function ContactClient({ projects }: { projects: Project[] }) {
       <GridContainer>
         <TextReveal
           text="Let's work together."
-          className="text-9xl uppercase col-start-3 col-span-9"
+          className="text-6xl lg:text-9xl uppercase col-span-full lg:col-start-3 lg:col-span-9"
           as="h1"
         />
-        <p className="col-start-3 col-span-3 font-medium uppercase">
+        <p className="col-span-full sm:col-span-2 lg:col-start-3 lg:col-span-3 font-medium uppercase">
           Create a website rich in storytelling and leave an impression for your
           audience. Rebrand with me and never look back.
         </p>
-        <p className="col-start-3 col-span-3 font-medium uppercase">
+        <p className="col-span-full sm:col-span-2 lg:col-start-3 lg:col-span-3 font-medium uppercase">
           Collaborate on a project. I'll help you finish your projects and give
           it the twist it deserves.
         </p>
-        <div className="col-start-3 col-span-3 flex gap-x-3">
+        <div className="col-span-full lg:col-start-3 lg:col-span-3 flex gap-x-3 flex-wrap">
           <Link href="/" className="underline">
             LinkedIn
           </Link>

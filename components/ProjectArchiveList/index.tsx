@@ -16,7 +16,7 @@ export function ProjectArchiveList({
   return (
     <ul
       className={cn(
-        "flex flex-col px-5 *:border-b *:border-b-neutral-700 mb-10",
+        "flex flex-col px-3 lg:px-5 *:border-b *:border-b-neutral-700 mb-10",
         className
       )}
     >
@@ -24,15 +24,23 @@ export function ProjectArchiveList({
         <li key={p._id} className="group py-1 relative">
           <Link
             href={`/projects/${p.slug}`}
-            className={"grid grid-cols-12 group-hover:text-neutral-50"}
+            className={
+              "grid grid-cols-6 md:grid-cols-12 group-hover:text-neutral-50"
+            }
           >
-            <span className="col-span-2">{String(i + 1).padStart(2, "0")}</span>
-            <span className="col-span-4">{p.name}</span>
-            <span className="col-span-2">{p.tag}</span>
+            <span className="col-span-1 md:col-span-2">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span className="col-span-5 md:col-span-6 lg:col-span-4">
+              {p.name}
+            </span>
+            <span className="hidden md:block md:col-span-3 lg:col-span-2">
+              {p.tag}
+            </span>
           </Link>
           <div
             className={cn(
-              "absolute hidden right-0 top-0 group-hover:block aspect-video w-96 z-10"
+              "absolute hidden right-0 top-0 lg:group-hover:block aspect-video w-96 z-10"
             )}
           >
             {p.images && p.images.length > 0 && (

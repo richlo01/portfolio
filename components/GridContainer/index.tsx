@@ -11,7 +11,7 @@ export function GridContainer({
   return (
     <div
       className={cn(
-        "grid grid-cols-4 lg:grid-cols-12 gap-x-3 gap-y-5 px-5",
+        "grid grid-cols-4 lg:grid-cols-12 gap-x-3 gap-y-5 px-3 lg:px-5",
         className
       )}
     >
