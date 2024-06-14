@@ -52,9 +52,9 @@ function ProjectBlock({ projects }: { projects: Project[] }) {
 }
 
 export function ProjectClient({ projects }: { projects: Project[] }) {
-  const searchParams = useSearchParams();
-  const view = searchParams.get("view");
-  const [isGrid, useIsGrid] = useState<boolean>(view === "grid");
+  // const searchParams = useSearchParams();
+  // const view = searchParams.get("view");
+  // const [isGrid, useIsGrid] = useState<boolean>(view === "grid");
 
   return (
     <>
