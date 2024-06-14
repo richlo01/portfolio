@@ -25,15 +25,13 @@ export function Footer() {
             </span>
           </p>
           <div className="my-16 mb-24 lg:my-auto">
-            <TraceContainer tooltip={<Slideshow />} ref={footerRef}>
-              <Link
-                href="mailto:lopezrs1201@gmail.com?subject=Let's Create A Project!"
-                className="text-4xl lg:text-5xl underline underline-offset-8 flex flex-col lg:flex-row lg:items-center "
-              >
-                <CornerDownRight className="mr-5" /> Let{"'"}s create your
-                project.
-              </Link>
-            </TraceContainer>
+            <Link
+              href="mailto:lopezrs1201@gmail.com?subject=Let's Create A Project!"
+              className="text-4xl lg:text-5xl underline underline-offset-8 flex flex-col lg:flex-row lg:items-center "
+            >
+              <CornerDownRight className="mr-5" /> Let{"'"}s create your
+              project.
+            </Link>
           </div>
         </div>
         <div className="hidden lg:block col-start-11 writing-vertical-rl rotate-180 mt-auto">

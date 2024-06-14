@@ -28,6 +28,7 @@ export const TraceContainer = forwardRef<HTMLDivElement, TraceContainerProps>(
     useEffect(() => {
       if (innerRef.current) {
         setRect(innerRef.current.getBoundingClientRect());
+        console.log(innerRef.current.getBoundingClientRect());
       }
     }, []);
 

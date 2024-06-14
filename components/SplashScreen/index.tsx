@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 
 const blackBox = {
   initial: {
@@ -45,6 +45,9 @@ const text = {
 };
 
 export function SplashScreen({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full h-screen relative">
       <motion.div
