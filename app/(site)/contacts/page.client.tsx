@@ -29,16 +29,16 @@ export function ContactClient({ projects }: { projects: Project[] }) {
           it the twist it deserves.
         </p>
         <div className="col-span-full lg:col-start-3 lg:col-span-3 flex gap-x-3 flex-wrap">
-          <Link href="/" className="underline">
+          <Link
+            href="https://www.linkedin.com/in/richard-lopez-6ab1b0207/"
+            className="underline"
+          >
             LinkedIn
           </Link>
-          <Link href="/" className="underline">
+          <Link href="https://github.com/richlo01" className="underline">
             GitHub
           </Link>
-          <Link href="/" className="underline">
-            Instagram
-          </Link>
-          <Link href="/" className="underline">
+          <Link href="mailto:lopezrs1201@gmail.com" className="underline">
             lopezrs1201@gmail.com
           </Link>
         </div>
