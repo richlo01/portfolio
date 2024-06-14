@@ -11,7 +11,7 @@ export function TextCarousel({
 }) {
   return (
     <div className={cn("w-full", className)}>
-      <Marquee className={cn("text-[425px]")} speed={150}>
+      <Marquee className={cn("text-[125px] lg:text-[185px]")} speed={150}>
         {text}
         {text}
       </Marquee>

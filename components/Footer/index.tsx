@@ -13,9 +13,7 @@ export function Footer() {
     <footer className="bg-neutral-900 text-neutral-100 pt-10 lg:pb-10 overflow-hidden">
       <GridContainer>
         <div className="col-span-full lg:col-span-8 flex flex-col">
-          <span className="uppercase tracking-widest text-xs roboto-mono">
-            Footer
-          </span>
+          <span className="uppercase tracking-widest text-xs">Footer</span>
           <p className="text-3xl lg:text-5xl mt-10 font-medium">
             I am committed
             <span className="text-neutral-400">
