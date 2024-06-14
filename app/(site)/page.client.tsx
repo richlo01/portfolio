@@ -22,33 +22,27 @@ export function HomeClient({ projects }: { projects: Project[] }) {
   const heroRef = useRef(null);
   return (
     <>
-      <div className="overflow-hidden">
-        <TraceContainer
-          className="h-[calc(100dvh-5rem)] relative flex flex-col justify-end"
-          tooltip={<Slideshow />}
-          ref={heroRef}
-        >
-          <div className="flex flex-col lg:h-full lg:flex-row lg:justify-between px-3 lg:px-5 pb-5 lg:pb-0 lg:pt-8 gap-y-3">
-            <p className="uppercase max-w-96 font-medium">
-              Richard is a full-stack developer based in Las Vegas, NV, USA.
-              Currently a programmer at Clark County.
-            </p>
-            <Image
-              alt="profile picture"
-              src={profilepic}
-              width={275}
-              height={275}
-              className="grayscale w-full lg:w-96 h-96 object-cover order-first lg:order-last"
-            />
-          </div>
-
+      <div className="overflow-hidden h-[calc(100dvh-5rem)] relative flex flex-col justify-end">
+        <div className="flex flex-col lg:h-full lg:flex-row lg:justify-between px-3 lg:px-5 pb-5 lg:pb-0 lg:pt-8 gap-y-3">
+          <p className="uppercase max-w-96 font-medium">
+            Richard is a full-stack developer based in Las Vegas, NV, USA.
+            Currently a programmer at Clark County.
+          </p>
           <Image
-            src={richardlopez}
-            alt="Homescreen splash text"
-            className="w-full order-first mt-auto lg:absolute bottom-0 px-3 lg:px-5 p-5 py-3"
-            priority
+            alt="profile picture"
+            src={profilepic}
+            width={275}
+            height={275}
+            className="grayscale w-full lg:w-96 h-96 object-cover order-first lg:order-last"
           />
-        </TraceContainer>
+        </div>
+
+        <Image
+          src={richardlopez}
+          alt="Homescreen splash text"
+          className="w-full order-first mt-auto lg:absolute bottom-0 px-3 lg:px-5 p-5 py-3"
+          priority
+        />
       </div>
 
       <HR title={"technologies"} />

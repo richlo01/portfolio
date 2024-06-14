@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar/navbar";
 import { Footer } from "@/components/Footer";
 import { NavbarMobile } from "@/components/Navbar/mobile/navbar";
+import { SplashScreen } from "@/components/SplashScreen";
 
 export default function RootLayout({
   children,
@@ -29,14 +30,18 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={[neueMontreal.className].join(" ")}>
-        <Navbar />
-        <NavbarMobile />
-        <NavbarAlt className={cn(showAltNav && "translate-y-0")} />
-        <Providers>
-          <main>{children}</main>
-        </Providers>
-        <Footer />
+      <body
+        className={cn([neueMontreal.className].join(" "), "overflow-hidden")}
+      >
+        <SplashScreen>
+          <Navbar />
+          <NavbarMobile />
+          <NavbarAlt className={cn(showAltNav && "translate-y-0")} />
+          <Providers>
+            <main>{children}</main>
+          </Providers>
+          <Footer />
+        </SplashScreen>
       </body>
     </html>
   );
